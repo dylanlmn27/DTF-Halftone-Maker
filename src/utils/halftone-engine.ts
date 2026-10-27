@@ -13,8 +13,7 @@
  */
 
 import type { HalftoneSettings } from '../types/halftone';
-import { averageColor, isNearBlack, isNearWhite } from './color';
-import { getDotDrawer } from './dot-shapes';
+import { isNearBlack, isNearWhite } from './color';
 
 /**
  * Progress callback type.
@@ -335,7 +334,7 @@ function processOrderedDither(
 /**
  * Fallback pixel-based dot drawing when OffscreenCanvas is not available.
  */
-function drawDotPixels(
+export function drawDotPixels(
   data: Uint8ClampedArray,
   imgWidth: number,
   imgHeight: number,
